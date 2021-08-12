@@ -97,6 +97,15 @@ namespace MSFlow.Helpers.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@data-id=&apos;mobile-header-navigation&apos;]/a[contains(@href,&apos;/Poker&apos;)].
+        /// </summary>
+        internal static string MobileHeaderNavigationPoker {
+            get {
+                return ResourceManager.GetString("MobileHeaderNavigationPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@data-id=&apos;mobile-header-navigation&apos;]/a[contains(@href,&apos;/Games&apos;)].
         /// </summary>
         internal static string MobileHeaderNavigationTableGames {
@@ -156,6 +165,15 @@ namespace MSFlow.Helpers.Resources {
         internal static string MobileLoginFormUsernameInput {
             get {
                 return ResourceManager.GetString("MobileLoginFormUsernameInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //adj-poker//span[contains(@class,&apos;poker&apos;)].
+        /// </summary>
+        internal static string MobilePlayPokerButton {
+            get {
+                return ResourceManager.GetString("MobilePlayPokerButton", resourceCulture);
             }
         }
         

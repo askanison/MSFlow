@@ -129,6 +129,9 @@
   <data name="MobileHeaderNavigationAviator" xml:space="preserve">
     <value>//div[@data-id='mobile-header-navigation']/a[contains(@href,'Aviator')]</value>
   </data>
+  <data name="MobileHeaderNavigationPoker" xml:space="preserve">
+    <value>//div[@data-id='mobile-header-navigation']/a[contains(@href,'/Poker')]</value>
+  </data>
   <data name="MobileHeaderNavigationTableGames" xml:space="preserve">
     <value>//div[@data-id='mobile-header-navigation']/a[contains(@href,'/Games')]</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="MobileLoginFormUsernameInput" xml:space="preserve">
     <value>//input[@data-id='username']</value>
+  </data>
+  <data name="MobilePlayPokerButton" xml:space="preserve">
+    <value>//adj-poker//span[contains(@class,'poker')]</value>
   </data>
   <data name="MobileTableBackgammonButton" xml:space="preserve">
     <value>//adj-span-item/span[contains(@class,'table-games')]</value>

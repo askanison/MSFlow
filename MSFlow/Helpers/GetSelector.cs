@@ -7,31 +7,22 @@ namespace MSFlow.Helpers
     {
         public static string GetMobileSelectorByName(string name)
         {
-            switch (name)
+            return name switch
             {
-                case "Plinko":
-                    return MainResources.MobileTurboPlinkoButton;
-                case "Mines":
-                    return MainResources.MobileTurboMinesButton;
-                case "Goal":
-                    return MainResources.MobileTurboGoalButton;
-                case "HiLo":
-                    return MainResources.MobileTurboHiloButton;
-                case "Dice":
-                    return MainResources.MobileTurboDiceButton;
-                case "Mini Roulette":
-                    return MainResources.MobileTurboMiniRouletteButton;
-                case "Dominoes":
-                    return MainResources.MobileTableDominoesButton;
-                case "Bura":
-                    return MainResources.MobileTableBuraButton;
-                case "Backgammon":
-                    return MainResources.MobileTableBackgammonButton;
-                case "Seka":
-                    return MainResources.MobileTableSekaButton;
-                default:
-                    throw new NotSupportedException("Selector not found");
-            }
+                "Plinko" => MainResources.MobileTurboPlinkoButton,
+                "Mines" => MainResources.MobileTurboMinesButton,
+                "Goal" => MainResources.MobileTurboGoalButton,
+                "HiLo" => MainResources.MobileTurboHiloButton,
+                "Dice" => MainResources.MobileTurboDiceButton,
+                "Mini Roulette" => MainResources.MobileTurboMiniRouletteButton,
+                "Dominoes" => MainResources.MobileTableDominoesButton,
+                "Bura" => MainResources.MobileTableBuraButton,
+                "Backgammon" => MainResources.MobileTableBackgammonButton,
+                "Seka" => MainResources.MobileTableSekaButton,
+                "Mobile Poker" => MainResources.MobileHeaderNavigationPoker,
+                "Play New Poker" => MainResources.MobilePlayPokerButton,
+                _ => throw new NotSupportedException("Selector not found"),
+            };
         }
     }
 }

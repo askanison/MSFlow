@@ -1,10 +1,6 @@
 ﻿using FluentAssertions;
-using OpenQA.Selenium;
 using MSFlow.Drivers;
-using MSFlow.Helpers.Enums;
 using MSFlow.Helpers.Resources;
-using System;
-using System.Threading;
 using TechTalk.SpecFlow;
 using static MSFlow.Base;
 using static MSFlow.Helpers.TestHelperData;
