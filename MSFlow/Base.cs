@@ -4,13 +4,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MSFlow
 {
@@ -129,7 +124,7 @@ namespace MSFlow
         {
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             return new Bitmap(new MemoryStream(screenshot.AsByteArray));
-            
+
         }
         public static string UploadImage(IWebDriver driver)
         {
