@@ -81,11 +81,7 @@ namespace MSFlow.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            if (scenarioContext.TestError != null)
-                specFlowOutputHelper.AddAttachment(UploadImage(driver));
-
             FinishTest(driver);
-
         }
 
         //[BeforeStep]
@@ -94,13 +90,11 @@ namespace MSFlow.Hooks
 
         //}
 
-        //[AfterStep]
-        //public void TakeScreenshotAfterStep()
-        //{
-            
-            
-
-            
-        //}
+        [AfterStep]
+        public void TakeScreenshotAfterStep()
+        {
+            if (scenarioContext.TestError != null)
+                specFlowOutputHelper.AddAttachment(UploadImage(driver));
+        }
     }
 }
