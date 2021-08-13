@@ -48,6 +48,16 @@ namespace MSFlow.Steps
             ElementVanished(driver, MainResources.MobileLoginFormLoginButton).Should().BeTrue("Login form still visible after login procedure");
         }
 
+        [Scope(Tag ="Poker") , Scope(Tag ="Mobile")]
+        [Then(@"Game is launched")]
+        public void ThenGameIsLaunched()
+        {
+            ElementExists(driver, "//iframe");
+            driver.SwitchTo().Frame(FindElement(driver, "//iframe", "Mobile Poker iframe not found"));
+            ElementExists(driver, "//main//app-cash", 15000).Should().BeTrue("Mobile Poker game not loaded");
+            driver.SwitchTo().DefaultContent();
+        }
+
 
     }
 }

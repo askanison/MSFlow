@@ -226,6 +226,154 @@ namespace MSFlow.Features
                     "t.com&currency=GEL&game_id=poker&", ((string[])(null)));
 #line hidden
         }
+        
+        public virtual void CheckMobilePokerAsNotAuthorizedUserV2(string mobilePoker, string playNewPoker, string url, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Poker"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Mobile Poker", mobilePoker);
+            argumentsOfScenario.Add("Play New Poker", playNewPoker);
+            argumentsOfScenario.Add("Url", url);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Mobile Poker as not authorized user v2", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 29
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 30
+  testRunner.Given("Open mobile Adjarabet page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 31
+  testRunner.And(string.Format("Navigate to \'{0}\' page", mobilePoker), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
+  testRunner.And(string.Format("I click \'{0}\' button", playNewPoker), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
+  testRunner.When("I log in from Login Form using \'sqatmpoker\' and \'Paroli1#\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 34
+  testRunner.Then("Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 35
+  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check Mobile Poker as not authorized user v2: Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobilePoker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Mobile Poker", "Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Play New Poker", "Play New Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://poker.adjarabet.com/?https://launch.spribegaming.com/poker?brand=adjarabe" +
+            "t.com&currency=GEL&game_id=poker&")]
+        public virtual void CheckMobilePokerAsNotAuthorizedUserV2_MobilePoker()
+        {
+#line 29
+ this.CheckMobilePokerAsNotAuthorizedUserV2("Mobile Poker", "Play New Poker", "https://poker.adjarabet.com/?https://launch.spribegaming.com/poker?brand=adjarabe" +
+                    "t.com&currency=GEL&game_id=poker&", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void CheckMobilePokerAsALoggedInUserV2(string mobilePoker, string playNewPoker, string url, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Poker"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Mobile Poker", mobilePoker);
+            argumentsOfScenario.Add("Play New Poker", playNewPoker);
+            argumentsOfScenario.Add("Url", url);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Mobile Poker as a logged in user V2", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 41
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 42
+  testRunner.Given("Open mobile Adjarabet page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 43
+  testRunner.And("Login on home page using \'sqatmpoker\' and \'Paroli1#\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+  testRunner.And(string.Format("Navigate to \'{0}\' page", mobilePoker), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 45
+  testRunner.When(string.Format("I click \'{0}\' button", playNewPoker), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 46
+  testRunner.Then("Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 47
+  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check Mobile Poker as a logged in user V2: Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobilePoker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Mobile Poker", "Mobile Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Play New Poker", "Play New Poker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://poker.adjarabet.com/?https://launch.spribegaming.com/poker?brand=adjarabe" +
+            "t.com&currency=GEL&game_id=poker&")]
+        public virtual void CheckMobilePokerAsALoggedInUserV2_MobilePoker()
+        {
+#line 41
+ this.CheckMobilePokerAsALoggedInUserV2("Mobile Poker", "Play New Poker", "https://poker.adjarabet.com/?https://launch.spribegaming.com/poker?brand=adjarabe" +
+                    "t.com&currency=GEL&game_id=poker&", ((string[])(null)));
+#line hidden
+        }
     }
 }
 #pragma warning restore
