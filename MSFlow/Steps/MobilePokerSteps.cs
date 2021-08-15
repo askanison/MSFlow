@@ -25,7 +25,6 @@ namespace MSFlow.Steps
         [Then(@"'(.*)' game is launched")]
         public void ThenGameIsLaunched(string p0)
         {
-            ScenarioContext.Current.Pending();
         }
 
         [Then(@"Mobile Poker game is launched")]

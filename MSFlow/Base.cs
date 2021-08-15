@@ -149,7 +149,7 @@ namespace MSFlow
                     File = new FileDescription(filePath)
                 };
                 var uploadResult = cloudinary.Upload(uploadParams);
-                Uri uploadURL = uploadResult.Uri;
+                Uri uploadURL = uploadResult.Url;
                 if (uploadURL == null)
                 {
                     return "Couldn't upload screenshot.";
@@ -159,7 +159,7 @@ namespace MSFlow
                 {
                     File.Delete(filePath);
                 }
-                return uploadResult.Uri.ToString();
+                return uploadResult.Url.ToString();
             }
             catch (Exception)
             {
