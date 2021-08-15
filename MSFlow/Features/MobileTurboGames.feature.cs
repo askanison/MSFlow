@@ -27,7 +27,8 @@ namespace MSFlow.Features
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-        private string[] _featureTags = ((string[])(null));
+        private string[] _featureTags = new string[] {
+                "Mobile"};
         
 #line 1 "MobileTurboGames.feature"
 #line hidden
@@ -48,7 +49,8 @@ namespace MSFlow.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileTurboGames", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "MobileTurboGames", null, ProgrammingLanguage.CSharp, new string[] {
+                        "Mobile"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -94,7 +96,7 @@ namespace MSFlow.Features
         public virtual void CheckMobileTurboGamesAsALoggedInUser(string turboGame, string url, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Mobile"};
+                    "TurboGames"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -104,7 +106,7 @@ namespace MSFlow.Features
             argumentsOfScenario.Add("Turbo Game", turboGame);
             argumentsOfScenario.Add("Url", url);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Turbo Games as a logged in user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -124,22 +126,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 6
  testRunner.Given("Open mobile Adjarabet page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 7
  testRunner.And("Login on home page using \'sqatmturbo\' and \'Paroli1#\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 7
+#line 8
  testRunner.And("Navigate to mobile Turbo Games page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
  testRunner.When(string.Format("I click \'{0}\' button", turboGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 9
+#line 10
  testRunner.Then("Turbo Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 10
+#line 11
  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -150,12 +152,13 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/plinko?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_Plinko()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("Plinko", "https://spgames.adjarabet.com/turbo/play/plinko?user=", ((string[])(null)));
 #line hidden
         }
@@ -164,12 +167,13 @@ this.CheckMobileTurboGamesAsALoggedInUser("Plinko", "https://spgames.adjarabet.c
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/mines?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_Mines()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("Mines", "https://spgames.adjarabet.com/turbo/play/mines?user=", ((string[])(null)));
 #line hidden
         }
@@ -178,12 +182,13 @@ this.CheckMobileTurboGamesAsALoggedInUser("Mines", "https://spgames.adjarabet.co
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/goal?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_Goal()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("Goal", "https://spgames.adjarabet.com/turbo/play/goal?user=", ((string[])(null)));
 #line hidden
         }
@@ -192,12 +197,13 @@ this.CheckMobileTurboGamesAsALoggedInUser("Goal", "https://spgames.adjarabet.com
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/hi-lo?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_HiLo()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("HiLo", "https://spgames.adjarabet.com/turbo/play/hi-lo?user=", ((string[])(null)));
 #line hidden
         }
@@ -206,12 +212,13 @@ this.CheckMobileTurboGamesAsALoggedInUser("HiLo", "https://spgames.adjarabet.com
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/dice?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_Dice()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("Dice", "https://spgames.adjarabet.com/turbo/play/dice?user=", ((string[])(null)));
 #line hidden
         }
@@ -220,12 +227,13 @@ this.CheckMobileTurboGamesAsALoggedInUser("Dice", "https://spgames.adjarabet.com
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a logged in user: Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/mini-roulette?user=")]
         public virtual void CheckMobileTurboGamesAsALoggedInUser_MiniRoulette()
         {
-#line 4
+#line 5
 this.CheckMobileTurboGamesAsALoggedInUser("Mini Roulette", "https://spgames.adjarabet.com/turbo/play/mini-roulette?user=", ((string[])(null)));
 #line hidden
         }
@@ -233,7 +241,7 @@ this.CheckMobileTurboGamesAsALoggedInUser("Mini Roulette", "https://spgames.adja
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser(string turboGame, string url, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Mobile"};
+                    "TurboGames"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -243,7 +251,7 @@ this.CheckMobileTurboGamesAsALoggedInUser("Mini Roulette", "https://spgames.adja
             argumentsOfScenario.Add("Turbo Game", turboGame);
             argumentsOfScenario.Add("Url", url);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check mobile Turbo Games as a not logged in user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 22
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -263,22 +271,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 24
  testRunner.Given("Open mobile Adjarabet page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 25
  testRunner.And("Navigate to mobile Turbo Games page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 26
  testRunner.And(string.Format("I click \'{0}\' button", turboGame), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 27
  testRunner.When("I log in from Login Form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 28
  testRunner.Then("Turbo Game is launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 28
+#line 29
  testRunner.And(string.Format("\'{0}\' is correct", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -289,12 +297,13 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Plinko")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/plinko?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_Plinko()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("Plinko", "https://spgames.adjarabet.com/turbo/play/plinko?user=", ((string[])(null)));
 #line hidden
         }
@@ -303,12 +312,13 @@ this.CheckMobileTurboGamesAsANotLoggedInUser("Plinko", "https://spgames.adjarabe
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Mines")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/mines?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_Mines()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("Mines", "https://spgames.adjarabet.com/turbo/play/mines?user=", ((string[])(null)));
 #line hidden
         }
@@ -317,12 +327,13 @@ this.CheckMobileTurboGamesAsANotLoggedInUser("Mines", "https://spgames.adjarabet
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Goal")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/goal?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_Goal()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("Goal", "https://spgames.adjarabet.com/turbo/play/goal?user=", ((string[])(null)));
 #line hidden
         }
@@ -331,12 +342,13 @@ this.CheckMobileTurboGamesAsANotLoggedInUser("Goal", "https://spgames.adjarabet.
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "HiLo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/hi-lo?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_HiLo()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("HiLo", "https://spgames.adjarabet.com/turbo/play/hi-lo?user=", ((string[])(null)));
 #line hidden
         }
@@ -345,12 +357,13 @@ this.CheckMobileTurboGamesAsANotLoggedInUser("HiLo", "https://spgames.adjarabet.
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Dice")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/dice?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_Dice()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("Dice", "https://spgames.adjarabet.com/turbo/play/dice?user=", ((string[])(null)));
 #line hidden
         }
@@ -359,12 +372,13 @@ this.CheckMobileTurboGamesAsANotLoggedInUser("Dice", "https://spgames.adjarabet.
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Check mobile Turbo Games as a not logged in user: Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MobileTurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Mobile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("TurboGames")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Turbo Game", "Mini Roulette")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Url", "https://spgames.adjarabet.com/turbo/play/mini-roulette?user=")]
         public virtual void CheckMobileTurboGamesAsANotLoggedInUser_MiniRoulette()
         {
-#line 22
+#line 23
 this.CheckMobileTurboGamesAsANotLoggedInUser("Mini Roulette", "https://spgames.adjarabet.com/turbo/play/mini-roulette?user=", ((string[])(null)));
 #line hidden
         }

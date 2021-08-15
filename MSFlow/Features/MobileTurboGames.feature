@@ -1,6 +1,7 @@
-﻿Feature: MobileTurboGames
+﻿@Mobile
+Feature: MobileTurboGames
 
-@Mobile
+@TurboGames
 Scenario: Check mobile Turbo Games as a logged in user
 	Given Open mobile Adjarabet page
 	And Login on home page using 'sqatmturbo' and 'Paroli1#'
@@ -18,7 +19,7 @@ Examples:
 	| Dice          | https://spgames.adjarabet.com/turbo/play/dice?user=          |
 	| Mini Roulette | https://spgames.adjarabet.com/turbo/play/mini-roulette?user= |
 
-@Mobile
+@TurboGames
 Scenario: Check mobile Turbo Games as a not logged in user
 	Given Open mobile Adjarabet page
 	And Navigate to mobile Turbo Games page

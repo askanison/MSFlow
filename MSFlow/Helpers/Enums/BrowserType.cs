@@ -5,6 +5,7 @@
         ChromeMobileLocal,
         ChromeMobileRemote,
         ChromeDesktopLocal,
-        ChromeDesktopRemote
+        ChromeDesktopRemote,
+        ChromeMobileLocalServer
     }
 }

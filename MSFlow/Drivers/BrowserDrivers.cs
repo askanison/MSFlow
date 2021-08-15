@@ -14,10 +14,11 @@ namespace MSFlow.Drivers
         {
             return browserType switch
             {
-                BrowserType.ChromeMobileLocal => GetLocalChromeMobile(),
+                BrowserType.ChromeMobileLocal => LocalChromeMobile,
                 BrowserType.ChromeMobileRemote => RemoteChromeMobile,
-                BrowserType.ChromeDesktopLocal => GetLocalChromeDesktop(),
+                BrowserType.ChromeDesktopLocal => LocalChromeDesktop,
                 BrowserType.ChromeDesktopRemote => RemoteChromeDesktop,
+                BrowserType.ChromeMobileLocalServer => MobileChromeServer,
                 _ => throw new NotSupportedException("not supported browser: <null>"),
             };
         }
@@ -41,6 +42,24 @@ namespace MSFlow.Drivers
             }
         }
 
+        private static IWebDriver MobileChromeServer
+        {
+            get
+            {
+                ChromeOptions options = new();
+                //options.AddArgument("--disable-notifications");
+                options.AddArguments("--disable-infobars");
+                //options.AddArguments("--headless");
+                options.EnableMobileEmulation("iPhone X");
+                options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
+                options.AddArguments("--ignore-certificate-errors");
+                options.AddArguments("start-maximized");
+                options.AddArguments("--disable-extensions");
+
+                return new RemoteWebDriver(new Uri("http://localhost:666/wd/hub"), options);
+            }
+        }
+
         private static IWebDriver RemoteChromeDesktop
         {
             get
@@ -59,38 +78,43 @@ namespace MSFlow.Drivers
             }
         }
 
-        private IWebDriver GetLocalChromeMobile()
+        private static IWebDriver LocalChromeMobile
         {
-            ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("--disable-notifications");
-            options.AddArguments("--disable-infobars");
-            options.AddArguments("--headless");
-            options.EnableMobileEmulation("iPhone X");
-            options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
-            options.AddArguments("--ignore-certificate-errors");
-            options.AddArguments("start-maximized");
-            options.AddArguments("--disable-extensions");
+            get
+            {
+                ChromeOptions options = new ChromeOptions();
+                //options.AddArgument("--disable-notifications");
+                options.AddArguments("--disable-infobars");
+                options.AddArguments("--headless");
+                options.EnableMobileEmulation("iPhone X");
+                options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
+                options.AddArguments("--ignore-certificate-errors");
+                options.AddArguments("start-maximized");
+                options.AddArguments("--disable-extensions");
 
-            return new ChromeDriver("C:\\", options);
+                return new ChromeDriver("C:\\", options);
+            }
         }
 
-        private IWebDriver GetLocalChromeDesktop()
+        private static IWebDriver LocalChromeDesktop
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--disable-notifications");
-            options.AddArguments("--disable-infobars");
-            //options.AddArguments("--headless");
-            //options.AddArguments("--disable-popup-blocking");
-            options.AddArgument("no-sandbox");
-            options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
-            options.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
-            options.AddArguments("--ignore-certificate-errors");
-            options.AddArguments("start-maximized");
+            get
+            {
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument("--disable-notifications");
+                options.AddArguments("--disable-infobars");
+                //options.AddArguments("--headless");
+                //options.AddArguments("--disable-popup-blocking");
+                options.AddArgument("no-sandbox");
+                options.AddUserProfilePreference("profile.default_content_setting_values.plugins", 1);
+                options.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
+                options.AddArguments("--ignore-certificate-errors");
+                options.AddArguments("start-maximized");
 
 
-            return new ChromeDriver("C:\\", options);
+                return new ChromeDriver("C:\\", options);
 
+            }
         }
-
     }
 }
