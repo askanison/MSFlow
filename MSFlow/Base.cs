@@ -131,9 +131,11 @@ namespace MSFlow
 
             try
             {
+                if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\Screenshot\\"))
+                    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\Screenshot\\");
                 string imageName = $"{DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss")}.{ScreenshotImageFormat.Jpeg}";
                 string filePath =
-                    @"C:\Users\a.turdzeladze\Pictures\SpecFlowScreenshot\" + imageName;
+                    $"{Directory.GetCurrentDirectory()}\\Screenshot\\{imageName}";                
                 //bdtsdrttzvxmx@solarunited.net
                 //Paroli1#
                 Account account = new Account(
@@ -151,14 +153,11 @@ namespace MSFlow
                 var uploadResult = cloudinary.Upload(uploadParams);
                 Uri uploadURL = uploadResult.Url;
                 if (uploadURL == null)
-                {
                     return "Couldn't upload screenshot.";
-                }
 
                 if (File.Exists(filePath))
-                {
                     File.Delete(filePath);
-                }
+
                 return uploadResult.Url.ToString();
             }
             catch (Exception)
