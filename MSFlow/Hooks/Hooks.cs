@@ -60,7 +60,7 @@ namespace MSFlow.Hooks
         public void TakeScreenshotAfterStep()
         {
             if (scenarioContext.TestError != null)
-                specFlowOutputHelper.AddAttachment(UploadImage(driver));
+                specFlowOutputHelper.AddAttachment(GetScreenshot(driver));
         }
     }
 }

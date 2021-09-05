@@ -53,9 +53,13 @@ namespace MSFlow.Steps
         public void ThenIsCorrect(string p0)
         {
             Thread.Sleep(1000);
-            driver.Url.Contains(p0).Should().BeTrue();
+            driver.Url.Contains(p0).Should().BeTrue("Url is incorrect after opening the game");
 
         }
+
+
+        
+
 
     }
 }

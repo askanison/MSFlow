@@ -15,3 +15,5 @@ Examples:
 	| Bura			| https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/bura?user=         |
 	| Backgammon    | https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/backgammon?user=   |
 	| Seka          | https://p2p.adjarabet.com/?https://spgames.adjarabet.com/p2p/lobby/seka?user=		    |
+
+

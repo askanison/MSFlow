@@ -126,9 +126,21 @@ namespace MSFlow
             return new Bitmap(new MemoryStream(screenshot.AsByteArray));
 
         }
-        public static string UploadImage(IWebDriver driver)
+
+        public static string GetScreenshot(IWebDriver driver)
         {
 
+            if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\Screenshot\\"))
+                Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\Screenshot\\");
+            string pathToImage = $"{DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss")}.{ScreenshotImageFormat.Jpeg}";
+            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            screenshot.SaveAsFile($"{Directory.GetCurrentDirectory()}\\Screenshot\\{pathToImage}");
+            return pathToImage;
+
+        }
+
+        public static string UploadImage(IWebDriver driver)
+        {
             try
             {
                 if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\Screenshot\\"))
@@ -143,7 +155,7 @@ namespace MSFlow
                    "793346215645576",
                    "Ka3fKVTYDmSIV2QaBpFSYweankQ");
 
-                Cloudinary cloudinary = new Cloudinary(account);
+                Cloudinary cloudinary = new(account);
                 Bitmap imageFile = TakeAScreenshot(driver);
                 imageFile.Save(filePath);
                 ImageUploadParams uploadParams = new()
@@ -160,9 +172,9 @@ namespace MSFlow
 
                 return uploadResult.Url.ToString();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return "Couldn't upload screenshot ";
+                return $"Couldn't upload screenshot {e.Message}";
             }
         }
     }
